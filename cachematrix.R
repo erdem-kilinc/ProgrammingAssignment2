@@ -34,7 +34,7 @@ cacheSolve <- function(x, ...) {
   inv <- x$getinv()
   
   #check if inv is calculated before by comparing it with NULL
-  #if calculated before return without inverswing the matrix
+  #if calculated before return without inversing the matrix
   if(!is.null(inv)){
     message("Getting cached data")
     
@@ -42,13 +42,13 @@ cacheSolve <- function(x, ...) {
     return(inv)
   }
   
-  #if inverse is not calcualted before calculate it
+  #if inverse is not calculated before calculate it
   message("Calculating inverse matrix")
   
   #assigning the internal matrix to data
   data <- x$get()
   
-  #inversind data and assigning it to variable inv
+  #inversing data and assigning it to variable inv
   inv <- solve(data)
   
   #setting internal inverse matrix
